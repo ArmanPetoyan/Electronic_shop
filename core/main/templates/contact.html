@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <!-- end header -->
+    <div class="brand_color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    </div>
+
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="main_form" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Your Name" type="text" name="contact_name" required>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="form-control" placeholder="Email" type="email" name="contact_email" required>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" placeholder="Phone" type="text" name="contact_phone" required>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" placeholder="Message" name="contact_message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="send btn btn-primary" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </form>                                                     
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end contact -->
+
+{% endblock %}
